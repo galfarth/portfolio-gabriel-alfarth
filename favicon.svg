@@ -1,5 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0f0f0f"/>
-  <path d="M19 42V22h18v6H26v8h11v6H19Z" fill="#00ff88"/>
-  <path d="M41 42h-6l8-20h6l8 20h-7l-1.2-3.4h-6.6L41 42Zm3-8.8h3.1L45.6 29 44 33.2Z" fill="#49c6ff"/>
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="13" fill="#020303"/>
+  <rect x="5" y="5" width="54" height="54" rx="11" fill="#050706" stroke="#00ff88" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="12" y="42" fill="#f8f8f8" font-family="Arial Black, Impact, sans-serif" font-size="25" font-weight="900">GA</text>
+  <path d="M38 40l3.2-10 3.2 10z" fill="#00ff88"/>
 </svg>

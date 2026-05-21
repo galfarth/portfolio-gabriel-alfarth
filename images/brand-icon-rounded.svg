@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">GA</title>
+  <desc id="desc">Monograma GA com borda verde neon arredondada.</desc>
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="#020303"/>
+  <rect x="72" y="72" width="1056" height="1056" rx="170" fill="#010202" stroke="#00ff88" stroke-width="14" filter="url(#glow)"/>
+  <text x="245" y="735" fill="#f7f7f7" font-family="Arial Black, Impact, sans-serif" font-size="438" font-weight="900">GA</text>
+  <path d="M760 705l40-124 40 124z" fill="#00ff88"/>
+</svg>

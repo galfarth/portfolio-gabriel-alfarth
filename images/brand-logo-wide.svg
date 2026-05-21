@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 720" role="img" aria-labelledby="title desc">
+  <title id="title">Galfarth</title>
+  <desc id="desc">Logo horizontal Galfarth em branco, preto e verde neon.</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="56%" r="54%">
+      <stop offset="0" stop-color="#00ff88" stop-opacity=".35"/>
+      <stop offset=".28" stop-color="#00ff88" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <rect width="2560" height="720" fill="#020303"/>
+  <ellipse cx="1280" cy="352" rx="820" ry="260" fill="url(#glow)" filter="url(#soft)"/>
+  <g fill="#f7f7f7" font-family="Arial Black, Impact, sans-serif" font-size="248" font-weight="900" letter-spacing="14">
+    <text x="238" y="332">GALFARTH</text>
+  </g>
+  <path d="M515 321l32-88 32 88z" fill="#00ff88"/>
+  <path d="M1088 321l32-88 32 88z" fill="#00ff88"/>
+  <line x1="248" y1="430" x2="2312" y2="430" stroke="#00ff88" stroke-width="8"/>
+  <circle cx="1280" cy="430" r="20" fill="#00ff88"/>
+  <circle cx="1280" cy="430" r="54" fill="#00ff88" opacity=".14" filter="url(#soft)"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" letter-spacing="34">
+    <text x="360" y="545" fill="#f2f2f2">FULL STACK</text>
+    <text x="1054" y="545" fill="#f2f2f2">DATA</text>
+    <text x="1500" y="545" fill="#f2f2f2">AUTOMATION</text>
+    <text x="1018" y="545" fill="#00ff88">|</text>
+    <text x="1426" y="545" fill="#00ff88">|</text>
+  </g>
+</svg>

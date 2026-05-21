@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 720" role="img" aria-labelledby="title desc">
+  <title id="title">Galfarth Full Stack Data Automation</title>
+  <desc id="desc">Arte Galfarth com wordmark, assinatura e monograma GA circular.</desc>
+  <defs>
+    <filter id="green-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="circle" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#052519"/>
+      <stop offset=".55" stop-color="#02100c"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+  </defs>
+  <rect width="2560" height="720" fill="#020303"/>
+  <g transform="translate(190 148)">
+    <text x="0" y="150" fill="#f8f8f8" font-family="Arial Black, Impact, sans-serif" font-size="178" font-weight="900" letter-spacing="11">GALFARTH</text>
+    <path d="M260 140l24-66 24 66z" fill="#00ff88"/>
+    <path d="M772 140l24-66 24 66z" fill="#00ff88"/>
+    <line x1="4" y1="215" x2="1164" y2="215" stroke="#00ff88" stroke-width="6"/>
+    <circle cx="586" cy="215" r="17" fill="#00ff88" filter="url(#green-glow)"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="30">
+      <text x="32" y="302" fill="#f1f1f1">FULL STACK</text>
+      <text x="530" y="302" fill="#f1f1f1">DATA</text>
+      <text x="780" y="302" fill="#f1f1f1">AUTOMATION</text>
+      <text x="492" y="302" fill="#00ff88">|</text>
+      <text x="730" y="302" fill="#00ff88">|</text>
+    </g>
+    <text x="36" y="372" fill="#7f8584" font-family="Arial, Helvetica, sans-serif" font-size="31" letter-spacing="17">Developer focused on systems, dashboards and automation</text>
+  </g>
+  <g transform="translate(1518 94)">
+    <circle cx="265" cy="265" r="230" fill="url(#circle)" stroke="#00ff88" stroke-width="7" filter="url(#green-glow)"/>
+    <text x="64" y="332" fill="#f7f7f7" font-family="Arial Black, Impact, sans-serif" font-size="204" font-weight="900">GA</text>
+    <path d="M334 320l26-74 26 74z" fill="#00ff88"/>
+  </g>
+</svg>

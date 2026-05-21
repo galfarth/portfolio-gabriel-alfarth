@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">GA Circle</title>
+  <desc id="desc">Monograma GA dentro de círculo verde neon.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#073322"/>
+      <stop offset=".58" stop-color="#02110c"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="#020303"/>
+  <circle cx="600" cy="600" r="505" fill="url(#bg)" stroke="#00ff88" stroke-width="12" filter="url(#glow)"/>
+  <text x="242" y="720" fill="#f7f7f7" font-family="Arial Black, Impact, sans-serif" font-size="430" font-weight="900">GA</text>
+  <path d="M762 697l40-122 40 122z" fill="#00ff88"/>
+</svg>
