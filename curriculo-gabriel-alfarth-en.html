@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | Gabriel Alfarth</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #172125;
+        background: #f4f6f5;
+      }
+      .page {
+        max-width: 900px;
+        margin: 32px auto;
+        background: #fff;
+        padding: 44px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      }
+      h1 {
+        margin: 0;
+        font-size: 34px;
+      }
+      h2 {
+        margin: 28px 0 10px;
+        font-size: 17px;
+        color: #087f50;
+        text-transform: uppercase;
+      }
+      p,
+      li {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+      .subtitle {
+        margin: 8px 0 16px;
+        color: #4d5c58;
+        font-size: 16px;
+      }
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        color: #4d5c58;
+        font-size: 13px;
+        border-top: 1px solid #d9e1de;
+        border-bottom: 1px solid #d9e1de;
+        padding: 12px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+      ul {
+        margin: 8px 0 0 18px;
+        padding: 0;
+      }
+      .item {
+        margin-bottom: 14px;
+      }
+      .item strong {
+        display: block;
+      }
+      .tech {
+        color: #4d5c58;
+        font-size: 13px;
+      }
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page {
+          margin: 0;
+          max-width: none;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <h1>Gabriel Schroeder Alfarth</h1>
+      <p class="subtitle">Full Stack Developer in progress | Data | Automation</p>
+      <div class="contact">
+        <span>gabrielschroederalfarth@gmail.com</span>
+        <span>GitHub: github.com/galfarth</span>
+        <span>LinkedIn: linkedin.com/in/gabriel-schroeder-alfarth</span>
+      </div>
+
+      <h2>Summary</h2>
+      <p>
+        Technology professional in development, focused on web development,
+        process automation, dashboards and data integration. Hands-on experience
+        with HTML, CSS, JavaScript, Python/FastAPI, Firebase, Power BI,
+        PostgreSQL and Microsoft SharePoint/OneDrive integrations.
+      </p>
+
+      <div class="grid">
+        <section>
+          <h2>Projects</h2>
+          <div class="item">
+            <strong>Loading Management System</strong>
+            <span class="tech">FastAPI, Microsoft Graph, SharePoint, Render</span>
+            <ul>
+              <li>Portal for checking loading schedules from SharePoint/OneDrive spreadsheets.</li>
+              <li>Optional Microsoft login with separate admin and viewer profiles.</li>
+              <li>Deployment configuration, environment variables and health endpoints.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <strong>Adv Minella</strong>
+            <span class="tech">HTML, CSS, JavaScript, Firebase, Netlify</span>
+            <ul>
+              <li>Institutional website with practice areas, blog and content pages.</li>
+              <li>Administrative portal supported by Firebase.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <strong>Weekly Loading Schedule</strong>
+            <span class="tech">HTML, Static Dashboard, GitHub Pages</span>
+            <ul>
+              <li>Dashboard with filters, volume indicators, mix, products and daily average.</li>
+              <li>Responsive interface for weekly operational tracking.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML, CSS, JavaScript and responsive interfaces</li>
+            <li>Python, FastAPI and REST APIs</li>
+            <li>Power BI, indicators and data modeling</li>
+            <li>PostgreSQL and database organization</li>
+            <li>Firebase, Netlify, Render and GitHub Pages</li>
+            <li>Microsoft Graph, SharePoint and OneDrive</li>
+            <li>Git, GitHub and project publishing</li>
+          </ul>
+
+          <h2>Objective</h2>
+          <p>
+            Work in web development, data or automation, contributing with
+            systems that are simple to operate, clear dashboards and digital
+            solutions for real business processes.
+          </p>
+
+          <h2>Languages</h2>
+          <ul>
+            <li>Portuguese: native</li>
+            <li>English: developing</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

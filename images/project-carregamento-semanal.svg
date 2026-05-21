@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Dashboard de Programacao de Carregamentos</title>
+  <desc id="desc">Preview visual de um dashboard com filtros, indicadores e graficos de carregamentos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101820"/>
+      <stop offset="1" stop-color="#183b35"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00ff88"/>
+      <stop offset="1" stop-color="#49c6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect x="70" y="62" width="1060" height="636" rx="28" fill="#0f1518" stroke="#253236" stroke-width="2"/>
+  <text x="110" y="125" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="700">Programacao de Carregamentos</text>
+  <text x="110" y="162" fill="#9fb2ad" font-family="Arial, sans-serif" font-size="18">Semana atual, volume, produtos e embalagens</text>
+  <g fill="#182326" stroke="#2f4044">
+    <rect x="110" y="205" width="170" height="56" rx="14"/>
+    <rect x="300" y="205" width="170" height="56" rx="14"/>
+    <rect x="490" y="205" width="170" height="56" rx="14"/>
+    <rect x="680" y="205" width="170" height="56" rx="14"/>
+  </g>
+  <g fill="#a9bbb7" font-family="Arial, sans-serif" font-size="15">
+    <text x="132" y="239">Semana</text>
+    <text x="322" y="239">Produto</text>
+    <text x="512" y="239">Embalagem</text>
+    <text x="702" y="239">Tipo</text>
+  </g>
+  <g>
+    <rect x="110" y="305" width="230" height="120" rx="18" fill="#172125" stroke="#2b3b3f"/>
+    <rect x="365" y="305" width="230" height="120" rx="18" fill="#172125" stroke="#2b3b3f"/>
+    <rect x="620" y="305" width="230" height="120" rx="18" fill="#172125" stroke="#2b3b3f"/>
+    <rect x="875" y="305" width="210" height="120" rx="18" fill="#172125" stroke="#2b3b3f"/>
+    <text x="135" y="350" fill="#9fb2ad" font-family="Arial, sans-serif" font-size="16">Volume</text>
+    <text x="135" y="395" fill="#00ff88" font-family="Arial, sans-serif" font-size="42" font-weight="700">1.248 t</text>
+    <text x="390" y="350" fill="#9fb2ad" font-family="Arial, sans-serif" font-size="16">Carregamentos</text>
+    <text x="390" y="395" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">86</text>
+    <text x="645" y="350" fill="#9fb2ad" font-family="Arial, sans-serif" font-size="16">Produtos</text>
+    <text x="645" y="395" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">14</text>
+    <text x="900" y="350" fill="#9fb2ad" font-family="Arial, sans-serif" font-size="16">Media diaria</text>
+    <text x="900" y="395" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">178 t</text>
+  </g>
+  <rect x="110" y="465" width="515" height="175" rx="18" fill="#172125" stroke="#2b3b3f"/>
+  <rect x="655" y="465" width="430" height="175" rx="18" fill="#172125" stroke="#2b3b3f"/>
+  <g fill="url(#green)">
+    <rect x="150" y="575" width="42" height="42" rx="8"/>
+    <rect x="220" y="540" width="42" height="77" rx="8"/>
+    <rect x="290" y="505" width="42" height="112" rx="8"/>
+    <rect x="360" y="555" width="42" height="62" rx="8"/>
+    <rect x="430" y="520" width="42" height="97" rx="8"/>
+    <rect x="500" y="485" width="42" height="132" rx="8"/>
+  </g>
+  <polyline points="705,600 760,565 815,580 870,525 925,545 980,500 1040,515" fill="none" stroke="#00ff88" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#49c6ff">
+    <circle cx="705" cy="600" r="8"/>
+    <circle cx="760" cy="565" r="8"/>
+    <circle cx="815" cy="580" r="8"/>
+    <circle cx="870" cy="525" r="8"/>
+    <circle cx="925" cy="545" r="8"/>
+    <circle cx="980" cy="500" r="8"/>
+    <circle cx="1040" cy="515" r="8"/>
+  </g>
+</svg>
