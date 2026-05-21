@@ -42,22 +42,10 @@ nav {
 }
 
 nav .left a {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
   text-decoration: none;
-}
-
-.brand-link {
-  display: inline-flex;
-  align-items: center;
-  width: 172px;
-  height: 48px;
-}
-
-.brand-link img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: left center;
-  display: block;
 }
 
 nav .right {
@@ -301,19 +289,17 @@ nav .right a:hover {
   color: #06110d !important;
 }
 
-.brand-hero-art {
+.headshot {
   flex: 0 0 auto;
-  width: min(600px, 46vw);
 }
 
-.brand-hero-art img {
-  width: 100%;
-  aspect-ratio: 2560 / 720;
+.headshot img {
+  width: min(300px, 70vw);
+  aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 255, 136, 0.16);
-  box-shadow: 0 0 38px rgba(0, 255, 136, 0.16);
-  display: block;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 255, 136, 0.28);
+  box-shadow: 0 0 32px rgba(0, 255, 136, 0.24);
 }
 
 .skills-track {
@@ -649,19 +635,6 @@ nav .right a:hover {
   background-color: #141615;
 }
 
-.contact-brand-art {
-  max-width: 940px;
-  margin: 32px auto 0;
-}
-
-.contact-brand-art img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.32);
-}
-
 .contact-group {
   display: grid;
   grid-template-columns: minmax(280px, 1fr) minmax(280px, 380px);
@@ -771,10 +744,6 @@ footer {
     max-width: 100%;
   }
 
-  .brand-hero-art {
-    width: min(760px, 100%);
-  }
-
   .hero-section p,
   .links,
   .hero-skills {
@@ -795,11 +764,6 @@ footer {
 
   nav .right {
     gap: 10px 14px;
-  }
-
-  .brand-link {
-    width: 142px;
-    height: 40px;
   }
 
   nav .right > a span {
