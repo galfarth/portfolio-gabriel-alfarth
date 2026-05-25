@@ -426,6 +426,27 @@ nav .right a:hover {
   transform: scale(1.04);
 }
 
+.project-card-dots {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  display: flex;
+  gap: 6px;
+}
+
+.project-card-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.22);
+}
+
+.project-card-dot.active {
+  background: var(--accent);
+}
+
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -540,13 +561,53 @@ nav .right a:hover {
   grid-template-columns: 1fr 1fr;
 }
 
-.modal-left img {
-  width: 100%;
-  height: 100%;
+.modal-left {
+  display: flex;
   min-height: 420px;
+  flex-direction: column;
+  background: #0f0f0f;
+}
+
+.modal-left > img {
+  width: 100%;
+  min-height: 0;
+  flex: 1;
   object-fit: cover;
   display: block;
   background: #0f0f0f;
+}
+
+.modal-gallery {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+  background: #101312;
+}
+
+.gallery-thumb {
+  width: 82px;
+  height: 54px;
+  flex: 0 0 auto;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 0;
+  background: #171a19;
+  cursor: pointer;
+}
+
+.gallery-thumb.active,
+.gallery-thumb:hover {
+  border-color: var(--accent);
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .modal-right {
@@ -798,8 +859,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .modal-left img {
-    min-height: 210px;
+  .modal-left {
+    min-height: 280px;
+  }
+
+  .modal-left > img {
     max-height: 240px;
   }
 

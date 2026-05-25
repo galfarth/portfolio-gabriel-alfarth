@@ -3,6 +3,7 @@ const projectContent = {
     sistemaCarregamentos: {
       title: "Sistema de Carregamentos",
       image: "images/project-sistema-carregamentos.jpeg",
+      gallery: ["images/screenshot7.png", "images/screenshot8.png", "images/screenshot10.png"],
       description:
         "Painel em FastAPI para consulta de carregamentos a partir de planilhas no SharePoint/OneDrive, com login Microsoft opcional e separa\u00e7\u00e3o entre perfil administrador e visualizador.",
       techIcons: [
@@ -25,6 +26,7 @@ const projectContent = {
     advMinella: {
       title: "Adv Minella",
       image: "images/project-advminella.png",
+      gallery: ["images/screenshot2.png", "images/screenshot3.png"],
       description:
         "Site institucional e portal administrativo para escrit\u00f3rio de advocacia, constru\u00eddo com HTML, CSS, JavaScript, Firebase e publica\u00e7\u00e3o via Netlify.",
       techIcons: [
@@ -48,6 +50,7 @@ const projectContent = {
     carregamentoSemanal: {
       title: "Programa\u00e7\u00e3o de Carregamentos",
       image: "images/project-carregamento-semanal.svg",
+      gallery: ["images/screenshot4.png", "images/screenshot5.png", "images/screenshot6.png"],
       description:
         "Dashboard est\u00e1tico para consulta e acompanhamento da programa\u00e7\u00e3o semanal de carregamentos da Eleva Qu\u00edmica, com filtros e indicadores operacionais.",
       techIcons: [
@@ -72,6 +75,7 @@ const projectContent = {
     sistemaCarregamentos: {
       title: "Loading Management System",
       image: "images/project-sistema-carregamentos.jpeg",
+      gallery: ["images/screenshot7.png", "images/screenshot8.png", "images/screenshot10.png"],
       description:
         "FastAPI panel for checking loading schedules from SharePoint/OneDrive spreadsheets, with optional Microsoft login and admin/viewer roles.",
       techIcons: [
@@ -94,6 +98,7 @@ const projectContent = {
     advMinella: {
       title: "Adv Minella",
       image: "images/project-advminella.png",
+      gallery: ["images/screenshot2.png", "images/screenshot3.png"],
       description:
         "Institutional website and admin portal for a law office, built with HTML, CSS, JavaScript, Firebase and Netlify deployment.",
       techIcons: [
@@ -117,6 +122,7 @@ const projectContent = {
     carregamentoSemanal: {
       title: "Weekly Loading Schedule",
       image: "images/project-carregamento-semanal.svg",
+      gallery: ["images/screenshot4.png", "images/screenshot5.png", "images/screenshot6.png"],
       description:
         "Static dashboard for checking and tracking Eleva Qu\u00edmica's weekly loading schedule, with filters and operational indicators.",
       techIcons: [
@@ -280,6 +286,95 @@ function renderTechIcons(container, techIcons) {
   });
 }
 
+function setModalImage(image, src, alt, fallbackSrc) {
+  image.alt = alt;
+  image.onerror = () => {
+    image.onerror = null;
+    if (fallbackSrc && image.src !== fallbackSrc) image.src = fallbackSrc;
+  };
+  image.src = src;
+}
+
+function renderProjectGallery(container, image, project) {
+  const images = project.gallery?.length ? project.gallery : [project.image];
+  container.innerHTML = "";
+  setModalImage(image, images[0], project.title, project.image);
+
+  images.forEach((src, index) => {
+    const button = document.createElement("button");
+    button.className = "gallery-thumb";
+    button.type = "button";
+    button.setAttribute("aria-label", `${project.title} - screenshot ${index + 1}`);
+    button.classList.toggle("active", index === 0);
+
+    const thumb = document.createElement("img");
+    thumb.src = src;
+    thumb.alt = "";
+    thumb.onerror = () => button.remove();
+
+    button.appendChild(thumb);
+    button.addEventListener("click", () => {
+      container.querySelector(".gallery-thumb.active")?.classList.remove("active");
+      button.classList.add("active");
+      setModalImage(image, src, project.title, project.image);
+    });
+
+    container.appendChild(button);
+  });
+}
+
+function imageExists(src) {
+  return new Promise((resolve) => {
+    const image = new Image();
+    image.onload = () => resolve(true);
+    image.onerror = () => resolve(false);
+    image.src = src;
+  });
+}
+
+async function initProjectCardGalleries() {
+  const cards = document.querySelectorAll(".project-card");
+
+  cards.forEach(async (card) => {
+    const projectKey = card.getAttribute("data-project");
+    const project = projectContent.pt[projectKey];
+    const preview = Array.from(card.children).find((child) => child.tagName === "IMG");
+    if (!project || !preview) return;
+
+    const gallery = project.gallery?.length ? project.gallery : [project.image];
+    const availableImages = [];
+    for (const src of gallery) {
+      if (await imageExists(src)) availableImages.push(src);
+    }
+
+    if (!availableImages.length) {
+      preview.src = project.image;
+      return;
+    }
+
+    preview.src = availableImages[0];
+    if (availableImages.length === 1) return;
+
+    const dots = document.createElement("div");
+    dots.className = "project-card-dots";
+    availableImages.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.className = "project-card-dot";
+      dot.classList.toggle("active", index === 0);
+      dots.appendChild(dot);
+    });
+    card.appendChild(dots);
+
+    let activeIndex = 0;
+    window.setInterval(() => {
+      activeIndex = (activeIndex + 1) % availableImages.length;
+      preview.src = availableImages[activeIndex];
+      dots.querySelector(".project-card-dot.active")?.classList.remove("active");
+      dots.children[activeIndex]?.classList.add("active");
+    }, 3500);
+  });
+}
+
 function initModal() {
   const modal = document.getElementById("projectModal");
   const closeModalBtn = document.getElementById("closeModal");
@@ -289,8 +384,11 @@ function initModal() {
     const project = projectContent[currentLanguage][projectKey];
     if (!project) return;
 
-    document.getElementById("modalImage").src = project.image;
-    document.getElementById("modalImage").alt = project.title;
+    renderProjectGallery(
+      document.getElementById("modalGallery"),
+      document.getElementById("modalImage"),
+      project
+    );
     document.getElementById("modalTitle").textContent = project.title;
     document.getElementById("modalDescription").textContent = project.description;
     document.getElementById("modalDate").textContent = `${translations[currentLanguage].yearLabel} ${project.date}`;
@@ -376,6 +474,7 @@ function initCarousel() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initLanguageToggle();
+  initProjectCardGalleries();
   initModal();
   initProjectFilter();
   initCarousel();
