@@ -3,7 +3,7 @@ const projectContent = {
     sistemaCarregamentos: {
       title: "Sistema de Carregamentos",
       image: "images/project-sistema-carregamentos.jpeg",
-      gallery: ["images/screenshot7.png", "images/screenshot8.png", "images/screenshot10.png"],
+      gallery: ["images/Design sem nome (1).png", "images/Design sem nome (2).png", "images/Design sem nome.png"],
       description:
         "Painel em FastAPI para consulta de carregamentos a partir de planilhas no SharePoint/OneDrive, com login Microsoft opcional e separa\u00e7\u00e3o entre perfil administrador e visualizador.",
       techIcons: [
@@ -26,7 +26,7 @@ const projectContent = {
     advMinella: {
       title: "Adv Minella",
       image: "images/project-advminella.png",
-      gallery: ["images/screenshot2.png", "images/screenshot3.png"],
+      gallery: ["images/Design sem nome (3).png", "images/screenshot3.png"],
       description:
         "Site institucional e portal administrativo para escrit\u00f3rio de advocacia, constru\u00eddo com HTML, CSS, JavaScript, Firebase e publica\u00e7\u00e3o via Netlify.",
       techIcons: [
@@ -50,7 +50,7 @@ const projectContent = {
     carregamentoSemanal: {
       title: "Programa\u00e7\u00e3o de Carregamentos",
       image: "images/project-carregamento-semanal.svg",
-      gallery: ["images/screenshot4.png", "images/screenshot5.png", "images/screenshot6.png"],
+      gallery: ["images/Design sem nome (4).png", "images/screenshot5.png", "images/screenshot6.png"],
       description:
         "Dashboard est\u00e1tico para consulta e acompanhamento da programa\u00e7\u00e3o semanal de carregamentos da Eleva Qu\u00edmica, com filtros e indicadores operacionais.",
       techIcons: [
@@ -75,7 +75,7 @@ const projectContent = {
     sistemaCarregamentos: {
       title: "Loading Management System",
       image: "images/project-sistema-carregamentos.jpeg",
-      gallery: ["images/screenshot7.png", "images/screenshot8.png", "images/screenshot10.png"],
+      gallery: ["images/Design sem nome (1).png", "images/Design sem nome (2).png", "images/Design sem nome.png"],
       description:
         "FastAPI panel for checking loading schedules from SharePoint/OneDrive spreadsheets, with optional Microsoft login and admin/viewer roles.",
       techIcons: [
@@ -98,7 +98,7 @@ const projectContent = {
     advMinella: {
       title: "Adv Minella",
       image: "images/project-advminella.png",
-      gallery: ["images/screenshot2.png", "images/screenshot3.png"],
+      gallery: ["images/Design sem nome (3).png", "images/screenshot3.png"],
       description:
         "Institutional website and admin portal for a law office, built with HTML, CSS, JavaScript, Firebase and Netlify deployment.",
       techIcons: [
@@ -122,7 +122,7 @@ const projectContent = {
     carregamentoSemanal: {
       title: "Weekly Loading Schedule",
       image: "images/project-carregamento-semanal.svg",
-      gallery: ["images/screenshot4.png", "images/screenshot5.png", "images/screenshot6.png"],
+      gallery: ["images/Design sem nome (4).png", "images/screenshot5.png", "images/screenshot6.png"],
       description:
         "Static dashboard for checking and tracking Eleva Qu\u00edmica's weekly loading schedule, with filters and operational indicators.",
       techIcons: [
