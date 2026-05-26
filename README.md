@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="images/brand-logo-wide.svg" alt="Gabriel Alfarth" width="360" />
 
   <h1>Portfolio Gabriel Alfarth</h1>
 
